@@ -1,0 +1,28 @@
+// Media queries mixin:
+@mixin mq($size) {
+  $breakpoints: (
+    // mobile: '(min-width: 320px) and (max-width: 767px)';
+    mo-la: '(min-width: 35.5em)' /* 568px */,
+    ta: '(min-width: 48em)' /* 768px */,
+    ta-la: '(min-width: 62.5em)' /* 1000px */,
+    pc: '(min-width: 75em)' /* 1200px */,
+    pc-la: '(min-width: 100em)' /* 1600px */
+  );
+  // retrieving breakpoint value from the list above
+  $breakpoint: map-get($breakpoints, $size);
+
+  @if str-index($size, 'px') or str-index($size, 'em') {
+    // if custom breakpoint was supplied
+    @media only screen and (#{$size}) {
+      @content;
+    }
+  } @else if $breakpoint == null {
+    // if breakpoint of unsupported type was supplied
+    @error "[Media queries mixin] Unknown breakpoint supplied to mixin. List of supported breakpoints below
+      'mo-la', 'ta', 'ta-la', 'pc', 'pc-la' and expressions like 'min-width: 400px', 'max-width: 30rem', etc.";
+  } @else {
+    @media only screen and #{$breakpoint} {
+      @content;
+    }
+  }
+}
