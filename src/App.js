@@ -28,7 +28,13 @@ function App(props) {
 
   return (
     <Router>
-      <Switch>{MiniAppsRoutes}</Switch>
+      <Switch>
+        {MiniAppsRoutes}
+        <Route path="/">
+          <PageTitle>Mini apps</PageTitle>
+          <MainPage miniAppsMetadata={miniAppsMetadata}></MainPage>
+        </Route>
+      </Switch>
     </Router>
   );
 }
