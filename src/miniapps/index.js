@@ -38,6 +38,7 @@ const miniAppsMetadata = {
   Bin2Dec: {
     title: 'Bin2Dec',
     description: 'Binary-to-Decimal number converter',
+    enabled: true,
   },
   BorderRadiusPreviewer: {
     title: 'Border Radius Previewer',

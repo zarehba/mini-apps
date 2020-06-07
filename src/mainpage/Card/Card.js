@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import ConditionalWrap from '../../shared/ConditionalWrap';
 
 const CardContainer = styled.div`
   width: 18rem;
@@ -12,11 +13,17 @@ const CardContainer = styled.div`
   padding: 2rem;
   transition: 0.2s;
 
-  &:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.2),
-      0px 1px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
-  }
+  ${(props) =>
+    props.enabled
+      ? `&:hover {
+          transform: scale(1.1);
+          box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.2),
+            0px 1px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+        }`
+      : `cursor: not-allowed;
+          opacity: 0.5;
+          filter: blur(0.5px);
+        `}
 `;
 
 const StyledLink = styled.a`
@@ -48,11 +55,16 @@ const Description = styled.div`
 
 const Card = (props) => {
   return (
-    <CardContainer>
-      <StyledLink href={props.route}>
+    <CardContainer enabled={props.enabled}>
+      <ConditionalWrap
+        condition={props.enabled}
+        wrap={(children) => (
+          <StyledLink href={props.route}>{children}</StyledLink>
+        )}
+      >
         <Title>{props.title}</Title>
         <Description>{props.description}</Description>
-      </StyledLink>
+      </ConditionalWrap>
     </CardContainer>
   );
 };
@@ -61,6 +73,7 @@ Card.propTypes = {
   route: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  enabled: PropTypes.bool,
 };
 
 export default Card;
