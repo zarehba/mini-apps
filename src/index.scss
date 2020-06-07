@@ -27,7 +27,8 @@ body {
   padding: Max(2%, 2rem) 5%;
   min-height: 100%;
   box-sizing: border-box;
-  color: Var(--color-primary-txt);
+  background-color: Var(--color-background);
+  color: Var(--color-text);
 }
 
 #root {

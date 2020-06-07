@@ -42,6 +42,7 @@ const Title = styled.h2`
   height: 30%;
   font-size: 1.8rem;
   text-align: center;
+  color: Var(--color-heading);
 `;
 
 const Description = styled.div`
