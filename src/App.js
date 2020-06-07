@@ -12,9 +12,6 @@ const PageTitle = styled.h1`
 
 const { miniAppsMetadata, ...MiniApps } = MiniAppsList;
 
-console.log(miniAppsMetadata);
-console.log(MiniApps);
-
 function App(props) {
   const MiniAppsRoutes = Object.values(MiniApps).map((MiniApp) => {
     const miniAppName = MiniApp.name;
