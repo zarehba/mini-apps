@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
 const PageTitle = styled.h1`
   margin: 2rem 0;
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   color: Var(--color-heading);
 `;
 
