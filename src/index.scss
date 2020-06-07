@@ -23,10 +23,10 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
   padding: Max(2%, 2rem) 5%;
   min-height: 100%;
   box-sizing: border-box;
-  background: Var(--color-primary-bg);
   color: Var(--color-primary-txt);
 }
 
