@@ -24,6 +24,7 @@ const PageTitle = styled.h1`
   margin: 2rem 0;
   font-size: 3.2rem;
   color: Var(--color-heading);
+  text-align: center;
 `;
 
 const { miniAppsMetadata, ...MiniApps } = MiniAppsList;
