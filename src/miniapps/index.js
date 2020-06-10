@@ -43,6 +43,7 @@ const miniAppsMetadata = {
   BorderRadiusPreviewer: {
     title: 'Border Radius Previewer',
     description: 'Preview how CSS3 border-radius values affect an element',
+    enabled: true,
   },
   Calculator: {
     title: 'Calculator',
