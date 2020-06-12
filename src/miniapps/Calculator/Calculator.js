@@ -79,11 +79,10 @@ const Calculator = () => {
   };
 
   const handleEnterKey = (e) => {
-    if (e.key !== 'Enter') return;
+    if (e.key !== 'Enter' && e.key !== '/') return;
 
     e.preventDefault();
     e.stopPropagation();
-    buttonHandle('=', 'result');
   };
 
   const buttonKeys = (buttons) =>
