@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import Draggable from 'react-draggable';
 import { useCopyToClipboard } from '../../hooks/useCopyToClipboard';
+import DraggableButton from './DraggableButton';
 import {
   BorderRadiusContainer,
   BorderRadiusPreview,
-  BorderRadiusCorner,
   StyledInnerForm,
   StyledLabel,
   StyledInnerInput,
@@ -57,26 +56,25 @@ const BorderRadiusPreviewer = () => {
     });
   };
 
-  const circularButtons = draggableButtons.map((btn, index) => (
-    <Draggable
-      axis={btn.horizontal ? 'x' : 'y'}
-      position={calculateButtonPosition(btn, squareWidth)}
-      bounds="parent"
-      onDrag={handleDrag.bind(null, index)}
-      key={btn.className}
-    >
-      <BorderRadiusCorner className={btn.className} Radius={buttonRadius}>
-        {btn.contents}
-      </BorderRadiusCorner>
-    </Draggable>
-  ));
+  const circularButtons = draggableButtons.map((buttonData, buttonIndex) => {
+    const draggableButtonParams = {
+      buttonData,
+      buttonIndex,
+      handleDrag,
+      squareWidth,
+      buttonRadius,
+    };
+    return (
+      <DraggableButton {...draggableButtonParams} key={buttonData.className} />
+    );
+  });
 
   const changeRadiusHandler = (e) => {
     const borderRadiusInput = e.target.value;
     const calculatedOffsets = borderRadiusInput
       .split(/(\s)/)
       .map((radiusValue) =>
-        parseFloat(radiusValue)
+        isFinite(parseFloat(radiusValue))
           ? `${distancePercentToPx(parseFloat(radiusValue), squareWidth)}`
           : NaN
       )
@@ -190,7 +188,7 @@ const distancePxToPercent = (distancePx, wholeDistance) =>
   `${roundFloat((distancePx / wholeDistance) * 100, 1)}`;
 
 const distancePercentToPx = (distancePercent, wholeDistance) =>
-  `${roundFloat((distancePercent / 100) * wholeDistance, 1)}`;
+  `${roundFloat((Math.min(distancePercent, 100) / 100) * wholeDistance, 1)}`;
 
 const defaultOffset = (btnRadius) => 5 * btnRadius;
 
@@ -260,21 +258,6 @@ const generateButtonArray = (buttonRadius) => [
     buttonOffset: defaultOffset(buttonRadius),
   },
 ];
-
-const calculateButtonPosition = (
-  { horizontal, left, top, buttonOffset },
-  squareWidth
-) => {
-  const position = { x: 0, y: 0 };
-  if (horizontal) {
-    position.x = left ? buttonOffset : squareWidth - buttonOffset;
-    position.y = top ? 0 : squareWidth;
-  } else {
-    position.x = left ? 0 : squareWidth;
-    position.y = top ? buttonOffset : squareWidth - buttonOffset;
-  }
-  return position;
-};
 
 const generateSquareBorderRadius = (draggableButtons, squareWidth) =>
   draggableButtons
