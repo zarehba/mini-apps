@@ -48,6 +48,7 @@ const miniAppsMetadata = {
   Calculator: {
     title: 'Calculator',
     description: 'Calculator App',
+    enabled: true,
   },
   CauseEffect: {
     title: 'Cause Effect',
