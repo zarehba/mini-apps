@@ -70,7 +70,6 @@ export const StyledLabel = styled.label`
 
 export const StyledInput = styled.input`
   display: inline-block;
-  padding: 0.3em 1.4em 0.3em 0;
   margin-left: 1em;
   border-radius: 8px;
   border: 2px solid var(--color-white);
@@ -78,7 +77,6 @@ export const StyledInput = styled.input`
   background: var(--color-white);
   color: var(--color-blue-medium);
   text-align: center;
-  max-width: 80%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -95,11 +93,14 @@ export const StyledInput = styled.input`
 `;
 
 export const StyledInnerInput = styled(StyledInput)`
+  padding: 0.3em 1.4em 0.3em 0;
   margin-top: 0.5em;
   max-width: calc(90% - 1em);
 `;
 
 export const StyledOuterInput = styled(StyledInput)`
+  max-width: 80px;
+  padding: 0.3em 0;
   border: 2px solid var(--color-blue-dark);
   :focus {
     outline: none;
