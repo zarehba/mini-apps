@@ -13,9 +13,13 @@ export function useCopyToClipboard(resetTimeout) {
     return () => clearTimeout(timer);
   }, [isCopied, resetTimeout]);
 
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text);
-    setIsCopied(true);
+  const copyToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setIsCopied(true);
+    } catch (err) {
+      /*Firefox :-( */
+    }
   };
 
   return [isCopied, copyToClipboard];
