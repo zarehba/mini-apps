@@ -96,6 +96,7 @@ export const DisplayContainer = styled.div`
 export const DisplayNumber = styled.input`
   width: 100%;
   padding: 1.5rem;
+  box-sizing: border-box;
   border: none;
   background: none;
   color: currentColor;
