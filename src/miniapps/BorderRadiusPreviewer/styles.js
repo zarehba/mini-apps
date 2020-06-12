@@ -12,14 +12,17 @@ export const BorderRadiusContainer = styled.div`
   background-clip: content-box;
 `;
 
-export const BorderRadiusPreview = styled.div`
+export const BorderRadiusPreview = styled.div.attrs((props) => ({
+  style: {
+    width: `${props.Side}px`,
+    height: `${props.Side}px`,
+    borderRadius: props.SquareBorderRadius,
+  },
+}))`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: ${(props) => props.Side}px;
-  height: ${(props) => props.Side}px;
   border: 0px dotted Var(--color-blue-dark-lighter);
-  border-radius: ${(props) => props.SquareBorderRadius};
   box-sizing: border-box;
   background: Var(--color-blue-medium);
   background-clip: content-box;
