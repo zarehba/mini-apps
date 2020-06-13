@@ -19,7 +19,7 @@ const StyledSubmitInput = styled.input`
   :active,
   :focus {
     outline: none;
-    color: white;
+    color: var(--color-white);
     border: 2px solid var(--color-blue-dark);
     background: var(--color-blue-dark-lighter);
   }

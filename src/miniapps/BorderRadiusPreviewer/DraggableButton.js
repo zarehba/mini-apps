@@ -17,7 +17,7 @@ const DraggableButton = ({
       axis={buttonData.horizontal ? 'x' : 'y'}
       position={calculateButtonPosition(buttonData, squareWidth)}
       bounds="parent"
-      onDrag={onDragHandler} /* useCallback ? or use data-somthin? */
+      onDrag={onDragHandler}
       key={buttonData.className}
     >
       <BorderRadiusCorner
