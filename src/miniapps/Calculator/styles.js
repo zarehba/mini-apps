@@ -15,6 +15,17 @@ export const CalculatorGlobalStyle = createGlobalStyle`
     color: Var(--color-white) !important;
     opacity: 0.9;
   }
+
+  @media only screen and (min-width: 768px) {
+    html {
+      font-size: 87.5%;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    html {
+      font-size: 100%;
+    }
+  }
 `;
 
 export const CalculatorContainer = styled.div`
@@ -23,6 +34,7 @@ export const CalculatorContainer = styled.div`
   height: 35rem;
   width: 25rem;
   color: Var(--color-white);
+  font-size: 1.6rem;
   transform: perspective(300px) rotateY(-5deg);
   transition: all 0.5s ease;
 
@@ -154,6 +166,7 @@ export const StyledButtonKey = styled.button`
   border: none;
   background: none;
   color: currentColor;
+  font-size: 1em;
   outline: none;
   cursor: pointer;
 
