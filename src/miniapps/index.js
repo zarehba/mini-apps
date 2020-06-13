@@ -63,6 +63,7 @@ const miniAppsMetadata = {
   ColorCycle: {
     title: 'Color Cycle',
     description: 'Cycle a color value through incremental changes',
+    enabled: true,
   },
   CountdownTimer: {
     title: 'Countdown Timer',
