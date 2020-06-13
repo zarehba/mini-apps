@@ -53,6 +53,7 @@ const miniAppsMetadata = {
   CauseEffect: {
     title: 'Cause Effect',
     description: 'Click list item to display item details',
+    enabled: true,
   },
   ChristmasLights: {
     title: 'Christmas Lights',
