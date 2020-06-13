@@ -58,6 +58,7 @@ const miniAppsMetadata = {
   ChristmasLights: {
     title: 'Christmas Lights',
     description: 'Simulate a string of Christmas lights',
+    enabled: true,
   },
   ColorCycle: {
     title: 'Color Cycle',
