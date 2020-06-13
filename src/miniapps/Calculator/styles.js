@@ -1,4 +1,21 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+const BG_IMAGE_URL =
+  'https://images.unsplash.com/photo-1564939558297-fc396f18e5c7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1651&q=80';
+
+export const CalculatorGlobalStyle = createGlobalStyle`
+  body {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('${BG_IMAGE_URL}');
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  h1 {
+    color: Var(--color-white) !important;
+    opacity: 0.9;
+  }
+`;
 
 export const CalculatorContainer = styled.div`
   display: flex;
