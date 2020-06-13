@@ -130,6 +130,7 @@ export const DetailsDt = styled.dt`
   border-bottom-left-radius: 5px;
   background: Var(--color-blue-dark);
   color: Var(--color-white);
+  text-align: right;
 `;
 
 export const DetailsDd = styled.dd`
