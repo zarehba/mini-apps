@@ -210,9 +210,6 @@ function checkInputValidity(field, input) {
       }
       return validity;
     case 'datetime':
-      console.log(input);
-      console.log(new Date(), new Date(input));
-
       if (new Date() >= new Date(input)) {
         validity.isValid = false;
         validity.errorMessages.push('Event cannot be in the past');

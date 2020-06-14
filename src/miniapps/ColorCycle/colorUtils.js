@@ -73,7 +73,6 @@ const rgbToHex = (rgb) => {
 };
 
 const hslToHex = (hslString) => {
-  console.log(hslString);
   let [, h, s, l] = /hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/g.exec(hslString);
   l /= 100;
   const a = (s * Math.min(l, 1 - l)) / 100;

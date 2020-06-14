@@ -12,7 +12,6 @@ function ColorPartInput({
   isValid = true,
   isDisabled = false,
 }) {
-  console.log(formatParts);
   const changeHandler = (e) => onChange(e, colorPartIndex);
 
   return (
