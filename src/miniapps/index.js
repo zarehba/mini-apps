@@ -83,6 +83,7 @@ const miniAppsMetadata = {
   DynamicCSSVar: {
     title: 'Dynamic CSS Variables',
     description: 'Dynamically change CSS variable settings',
+    enabled: true,
   },
   FirstDB: {
     title: 'First DB',
