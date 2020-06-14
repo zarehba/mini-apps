@@ -88,6 +88,7 @@ const miniAppsMetadata = {
   FirstDB: {
     title: 'First DB',
     description: 'First Database app',
+    enabled: true,
   },
   FlipImage: {
     title: 'Flip Image',
