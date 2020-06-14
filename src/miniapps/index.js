@@ -73,6 +73,7 @@ const miniAppsMetadata = {
   CSV2JSON: {
     title: 'CSV2JSON',
     description: 'CSV to JSON converter',
+    enabled: true,
   },
   DollarsToCents: {
     title: 'Dollars to Cents',

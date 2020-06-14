@@ -1,6 +1,6 @@
 # CSV2JSON
 
-In the [JSON2CSV](./JSON2CSV-App.md) application you translated JSON
+In the [JSON2CSV](../JSON2CSV/JSON2CSV.md) application you translated JSON
 to a comma separated value (CSV) format. The objective of CSV2JSON is to
 reverse that process by converting a block of CSV text to JSON.
 
