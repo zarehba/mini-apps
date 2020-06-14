@@ -28,6 +28,13 @@ export const StyledButton = styled.button`
     border: 2px solid var(--color-blue-dark-lighter);
     background: var(--color-blue-dark-lighter);
   }
+
+  :disabled {
+    opacity: 0.5;
+    background: Var(--color-dark);
+    border: 2px solid Var(--color-dark);
+    cursor: auto;
+  }
 `;
 
 const Button = ({ onClick, children = '', ...buttonProps }) => {
