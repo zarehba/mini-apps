@@ -78,6 +78,7 @@ const miniAppsMetadata = {
   DollarsToCents: {
     title: 'Dollars to Cents',
     description: 'Convert dollars to cents',
+    enabled: true,
   },
   DynamicCSSVar: {
     title: 'Dynamic CSS Variables',
