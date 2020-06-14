@@ -109,6 +109,7 @@ const miniAppsMetadata = {
   JSON2CSV: {
     title: 'JSON2CSV',
     description: 'JSON to CSV converter',
+    enabled: true,
   },
   KeyValue: {
     title: 'Key Value',
