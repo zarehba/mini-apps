@@ -68,6 +68,7 @@ const miniAppsMetadata = {
   CountdownTimer: {
     title: 'Countdown Timer',
     description: 'Event Countdown timer',
+    enabled: true,
   },
   CSV2JSON: {
     title: 'CSV2JSON',
