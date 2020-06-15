@@ -93,6 +93,7 @@ const miniAppsMetadata = {
   FlipImage: {
     title: 'Flip Image',
     description: 'Change the orientation of images across two axes',
+    enabled: true,
   },
   GitHubStatus: {
     title: 'GitHub Status',
