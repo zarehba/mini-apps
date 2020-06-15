@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import cheerio from 'cheerio';
 import Button from '../../shared/Button';
 import Spinner from '../../shared/Spinner';
@@ -10,7 +10,7 @@ const GitHubStatus = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
 
-  async function getGithubComponents() {
+  async function fetchGithubComponents() {
     const result = await fetch('http://www.githubstatus.com/').then(
       (response) => {
         if (response.ok) {
@@ -38,8 +38,9 @@ const GitHubStatus = () => {
     return githubComponents;
   }
 
-  useEffect(() => {
-    getGithubComponents()
+  const getGithubComponents = useCallback(() => {
+    setIsLoading(true);
+    fetchGithubComponents()
       .then((result) => {
         setGithubStatuses(result);
         setError('');
@@ -52,20 +53,9 @@ const GitHubStatus = () => {
       });
   }, []);
 
-  const refreshHandler = () => {
-    setIsLoading(true);
-    getGithubComponents()
-      .then((result) => {
-        setGithubStatuses(result);
-        setError('');
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        setGithubStatuses([]);
-        setError(`An error has occurred. Status can't be displayed.`);
-        setIsLoading(false);
-      });
-  };
+  useEffect(() => {
+    getGithubComponents();
+  }, [getGithubComponents]);
 
   return (
     <GitHubStatusContainer>
@@ -81,7 +71,7 @@ const GitHubStatus = () => {
           </GitHubStatusCard>
         ))}
       {!isLoading && error && <ErrorMsg>{error}</ErrorMsg>}
-      <RefreshButton onClick={refreshHandler}>
+      <RefreshButton onClick={getGithubComponents}>
         Refresh GitHub statuses
       </RefreshButton>
     </GitHubStatusContainer>
