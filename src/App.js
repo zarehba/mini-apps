@@ -36,7 +36,7 @@ function App(props) {
       <Route path={miniAppsMetadata[miniAppName].route} key={miniAppName}>
         <GlobalStyle />
         <PageTitle>{miniAppsMetadata[miniAppName].title}</PageTitle>
-        {MiniApp()}
+        <MiniApp />
       </Route>
     );
   });
