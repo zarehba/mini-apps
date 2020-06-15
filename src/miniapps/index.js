@@ -98,6 +98,7 @@ const miniAppsMetadata = {
   GitHubStatus: {
     title: 'GitHub Status',
     description: 'Display Current GitHub Status',
+    enabled: true,
   },
   Hello: {
     title: 'Hello',
