@@ -108,6 +108,7 @@ const miniAppsMetadata = {
   IOTMailbox: {
     title: 'IOT Mailbox Simulator',
     description: 'Use callbacks to check your snail mail',
+    enabled: true,
   },
   JavascriptValidationWithRegex: {
     title: 'JS Input Validation',
