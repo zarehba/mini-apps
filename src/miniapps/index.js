@@ -103,6 +103,7 @@ const miniAppsMetadata = {
   Hello: {
     title: 'Hello',
     description: 'User native language greeting',
+    enabled: true,
   },
   IOTMailbox: {
     title: 'IOT Mailbox Simulator',
