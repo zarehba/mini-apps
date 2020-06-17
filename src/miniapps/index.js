@@ -123,6 +123,7 @@ const miniAppsMetadata = {
   KeyValue: {
     title: 'Key Value',
     description: 'Keyboard Event Values',
+    enabled: true,
   },
   LoremIpsumGenerator: {
     title: 'Lorem Ipsum Generator',
