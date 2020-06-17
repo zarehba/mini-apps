@@ -113,6 +113,7 @@ const miniAppsMetadata = {
   JavascriptValidationWithRegex: {
     title: 'JS Input Validation',
     description: 'Script to validate inputs entered by a user using RegEx',
+    enabled: true,
   },
   JSON2CSV: {
     title: 'JSON2CSV',
