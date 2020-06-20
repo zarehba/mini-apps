@@ -35,6 +35,16 @@ const SwitchCheckbox = styled.input.attrs((props) => ({ type: 'checkbox' }))`
     -ms-transform: translateX(2.6rem);
     transform: translateX(2.6rem);
   }
+
+  ${(props) =>
+    props.$disabled &&
+    `
+    & + span {
+      background-color: Var(--color-blue-light) !important;
+      cursor: not-allowed;
+      user-select: none;
+    }
+  `}
 `;
 
 const SwitchSlider = styled.span`
@@ -66,11 +76,18 @@ const Switch = ({
   isChecked = false,
   customStyle,
   labelText = 'Toggle',
+  disabled,
 }) => {
+  const onChangeProp = disabled ? {} : { onChange: onChange };
+
   return (
     <SwitchLabel customStyle={customStyle}>
       {labelText}
-      <SwitchCheckbox checked={isChecked} onChange={onChange} />
+      <SwitchCheckbox
+        checked={isChecked}
+        {...onChangeProp}
+        $disabled={disabled}
+      />
       <SwitchSlider></SwitchSlider>
     </SwitchLabel>
   );
@@ -81,6 +98,7 @@ Switch.propTypes = {
   isChecked: PropTypes.bool,
   labelText: PropTypes.string,
   customStyle: PropTypes.object,
+  disabled: PropTypes.bool,
 };
 
 export default Switch;
