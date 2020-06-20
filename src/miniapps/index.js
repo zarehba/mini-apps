@@ -143,6 +143,7 @@ const miniAppsMetadata = {
   PomodoroClock: {
     title: 'Pomodoro Clock',
     description: 'Task timer to aid personal productivity',
+    enabled: true,
   },
   ProductLandingPage: {
     title: 'Product Landing Page',
