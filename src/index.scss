@@ -1,6 +1,42 @@
 @import-normalize;
 @import 'shared/utils';
 
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'),
+    url('./assets/open-sans-v18-latin-regular.woff2') format('woff2'),
+    url('./assets/open-sans-v18-latin-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'),
+    url('./assets/open-sans-v18-latin-italic.woff2') format('woff2'),
+    url('./assets/open-sans-v18-latin-italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'),
+    url('./assets/open-sans-v18-latin-700.woff2') format('woff2'),
+    url('./assets/open-sans-v18-latin-700.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'),
+    url('./assets/open-sans-v18-latin-700italic.woff2') format('woff2'),
+    url('./assets/open-sans-v18-latin-700italic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
 *,
 *::before,
 *::after {
@@ -19,8 +55,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.6rem;
