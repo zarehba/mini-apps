@@ -128,6 +128,7 @@ const miniAppsMetadata = {
   LoremIpsumGenerator: {
     title: 'Lorem Ipsum Generator',
     description: 'Generate lorem ipsum placeholder text',
+    enabled: true,
   },
   NotesApp: {
     title: 'Notes App',
