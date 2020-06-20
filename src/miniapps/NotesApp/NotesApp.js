@@ -133,9 +133,9 @@ const NoteHeading = styled.div`
 
 const NoteDate = styled.span`
   display: block;
-  margin-bottom: 0.3rem;
-  margin-right: 3.5rem;
-  line-height: 0.8em;
+  margin-bottom: 1rem;
+  margin-right: 3rem;
+  line-height: 1.1em;
   font-size: 0.7em;
   text-align: right;
 `;
