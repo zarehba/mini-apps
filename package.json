@@ -9,6 +9,7 @@
     "cheerio": "^1.0.0-rc.5",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-contenteditable": "^3.3.5",
     "react-dom": "^16.13.1",
     "react-draggable": "^4.4.3",
     "react-dropzone": "^11.2.4",

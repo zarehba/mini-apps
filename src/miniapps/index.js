@@ -133,6 +133,7 @@ const miniAppsMetadata = {
   NotesApp: {
     title: 'Notes App',
     description: 'Create an online note pad',
+    enabled: true,
   },
   PearsonRegression: {
     title: 'Pearson Regression',
