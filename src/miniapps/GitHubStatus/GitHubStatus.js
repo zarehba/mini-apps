@@ -11,7 +11,7 @@ const GitHubStatus = () => {
   const [error, setError] = useState('');
 
   async function fetchGithubComponents() {
-    const result = await fetch('http://www.githubstatus.com/').then(
+    const result = await fetch('https://www.githubstatus.com/').then(
       (response) => {
         if (response.ok) {
           return response.text();
