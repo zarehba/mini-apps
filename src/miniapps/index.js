@@ -138,6 +138,7 @@ const miniAppsMetadata = {
   PearsonRegression: {
     title: 'Pearson Regression',
     description: 'Calculate the correlation coefficient for two sets of data',
+    enabled: true,
   },
   PomodoroClock: {
     title: 'Pomodoro Clock',
