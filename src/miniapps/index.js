@@ -158,6 +158,7 @@ const miniAppsMetadata = {
   RandomMealGenerator: {
     title: 'Random Meal Generator',
     description: 'Generate random meals',
+    enabled: true,
   },
   RandomNumberGenerator: {
     title: 'Random Number Generator',
