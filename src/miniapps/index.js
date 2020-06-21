@@ -148,6 +148,7 @@ const miniAppsMetadata = {
   ProductLandingPage: {
     title: 'Product Landing Page',
     description: 'Showcase product details for possible buyers',
+    enabled: true,
   },
   QuizApp: {
     title: 'Quiz App',
