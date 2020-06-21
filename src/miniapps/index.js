@@ -163,6 +163,7 @@ const miniAppsMetadata = {
   RandomNumberGenerator: {
     title: 'Random Number Generator',
     description: 'Generate random number between range',
+    enabled: true,
   },
   RecipeApp: {
     title: 'Recipe App',
