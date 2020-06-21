@@ -153,6 +153,7 @@ const miniAppsMetadata = {
   QuizApp: {
     title: 'Quiz App',
     description: 'Test your knowledge by answering questions',
+    enabled: true,
   },
   RandomMealGenerator: {
     title: 'Random Meal Generator',
