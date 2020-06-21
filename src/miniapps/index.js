@@ -168,6 +168,7 @@ const miniAppsMetadata = {
   RecipeApp: {
     title: 'Recipe App',
     description: 'Recipe',
+    enabled: true,
   },
   Roman2DecimalConverter: {
     title: 'Roman to Decimal Converter',
