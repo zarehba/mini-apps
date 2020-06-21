@@ -1,5 +1,6 @@
 // login form if borrowed from DynamicCssVarForm miniapp
 import React, { useState, useRef, useEffect } from 'react';
+import { fetchData } from '../../shared/functions';
 import Input from '../../shared/Input';
 import Button, { StyledButton } from '../../shared/Button';
 import { cardEnlargingOnHover } from '../../shared/styledUtilities';
@@ -7,14 +8,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 const WHITE = '#FFFFFF';
 const LIGHT_RED = '#FFDDDD';
-
-const fetchData = async (url) =>
-  await fetch(url).then((response) => {
-    if (response.ok) {
-      return response.json();
-    }
-    throw new Error('Something went wrong');
-  });
 
 const decodeHTML = (html) => {
   const txt = document.createElement('textarea');

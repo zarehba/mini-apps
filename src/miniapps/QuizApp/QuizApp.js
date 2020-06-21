@@ -3,19 +3,12 @@ import Quiz from './Quiz';
 import Dropdown from '../../shared/Dropdown';
 import Button from '../../shared/Button';
 import Spinner from '../../shared/Spinner';
+import { fetchData } from '../../shared/functions';
 import styled, { createGlobalStyle } from 'styled-components';
 
 const URL_GET_CATEGORIES = 'https://opentdb.com/api_category.php';
 const URL_GET_QUESTIONS =
   'https://opentdb.com/api.php?amount=10&type=multiple&category=$categoryId';
-
-const fetchData = async (url) =>
-  await fetch(url).then(async (response) => {
-    if (response.ok) {
-      return await response.json();
-    }
-    throw new Error('Something went wrong');
-  });
 
 const QuizApp = () => {
   const [quizCategories, setQuizCategories] = useState([]);
