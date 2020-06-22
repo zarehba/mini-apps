@@ -173,6 +173,7 @@ const miniAppsMetadata = {
   Roman2DecimalConverter: {
     title: 'Roman to Decimal Converter',
     description: 'Convert Roman to Decimal numbers',
+    enabled: true,
   },
   SliderDesign: {
     title: 'Slider Design',
