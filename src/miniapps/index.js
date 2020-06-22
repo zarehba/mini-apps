@@ -178,6 +178,7 @@ const miniAppsMetadata = {
   SliderDesign: {
     title: 'Slider Design',
     description: 'Display images using a slider control',
+    enabled: true,
   },
   StopwatchApp: {
     title: 'Stopwatch App',
