@@ -183,6 +183,7 @@ const miniAppsMetadata = {
   StopwatchApp: {
     title: 'Stopwatch App',
     description: 'Count time spent on activities',
+    enabled: true,
   },
   TrueOrFalse: {
     title: 'TrueOrFalse',
