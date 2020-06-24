@@ -188,6 +188,7 @@ const miniAppsMetadata = {
   TrueOrFalse: {
     title: 'TrueOrFalse',
     description: 'Identify the result of a conditional comparison',
+    enabled: true,
   },
   VigenereCipher: {
     title: 'Vigenere Cipher',
