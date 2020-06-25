@@ -198,6 +198,7 @@ const miniAppsMetadata = {
   WeatherApp: {
     title: 'Weather App',
     description: 'Get the temperature, weather condition of a city',
+    enabled: true,
   },
   WindchillApp: {
     title: 'Wind Chill App',
