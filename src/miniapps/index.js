@@ -203,6 +203,7 @@ const miniAppsMetadata = {
   WindchillApp: {
     title: 'Wind Chill App',
     description: 'Calculate the windchill factor from an actual temperature',
+    enabled: true,
   },
   WordFrequency: {
     title: 'Word Frequency',
