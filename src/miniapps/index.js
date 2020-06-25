@@ -193,6 +193,7 @@ const miniAppsMetadata = {
   VigenereCipher: {
     title: 'Vigenere Cipher',
     description: 'Encrypt text using the Vigenere Cypher',
+    enabled: true,
   },
   WeatherApp: {
     title: 'Weather App',
