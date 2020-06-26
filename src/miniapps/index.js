@@ -208,6 +208,7 @@ const miniAppsMetadata = {
   WordFrequency: {
     title: 'Word Frequency',
     description: 'Calculate word frequency in a block of text',
+    enabled: true,
   },
 };
 Object.keys(miniAppsMetadata).forEach((app) => {
