@@ -6,6 +6,7 @@ App is hosted live on: https://mini-apps-zarehba.vercel.app/
 
 Ideas for these mini apps come from [this repository](https://github.com/florinpop17/app-ideas/tree/master/Projects/1-Beginner)
 
+Mini apps descriptions:
 | Name                                                                                                 | Short Description                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | [Bin2Dec](./src/miniapps/Bin2Dec/Bin2Dec.md)                                                         | Binary-to-Decimal number converter                         |
