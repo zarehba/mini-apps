@@ -1,5 +1,9 @@
 # Mini apps of a beginner
 
+A bunch of simple mini-apps.
+
+App is hosted live on: https://mini-apps-zarehba.vercel.app/
+
 Ideas for these mini apps come from [this repository](https://github.com/florinpop17/app-ideas/tree/master/Projects/1-Beginner)
 
 | Name                                                                                                 | Short Description                                          |
