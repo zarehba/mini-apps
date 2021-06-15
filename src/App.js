@@ -30,16 +30,18 @@ const PageTitle = styled.h1`
 const { miniAppsMetadata, ...MiniApps } = MiniAppsList;
 
 function App(props) {
-  const MiniAppsRoutes = Object.values(MiniApps).map((MiniApp) => {
-    const miniAppName = MiniApp.name;
-    return (
-      <Route path={miniAppsMetadata[miniAppName].route} key={miniAppName}>
-        <GlobalStyle />
-        <PageTitle>{miniAppsMetadata[miniAppName].title}</PageTitle>
-        <MiniApp />
-      </Route>
-    );
-  });
+  const MiniAppsRoutes = Object.entries(miniAppsMetadata).map(
+    ([miniAppName, miniAppMetadata]) => {
+      const Comp = MiniApps[miniAppName];
+      return (
+        <Route path={miniAppMetadata.route} key={miniAppName}>
+          <GlobalStyle />
+          <PageTitle>{miniAppMetadata.title}</PageTitle>
+          <Comp />
+        </Route>
+      );
+    }
+  );
 
   return (
     <Router>
